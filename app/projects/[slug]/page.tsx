@@ -118,7 +118,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-base-content leading-tight tracking-tight">
                   {project.title}
                 </h1>
-                <p className="text-base-content/60 leading-relaxed line-clamp-3">
+                <p className="text-base-content/60 leading-relaxed ">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">

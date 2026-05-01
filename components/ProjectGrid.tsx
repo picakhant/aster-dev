@@ -87,11 +87,11 @@ export default function ProjectGrid() {
 
                     <div className="absolute top-4 right-4 z-10">
                       {isCompleted ? (
-                        <span className="badge border-none bg-success/20 text-success backdrop-blur-md font-mono text-xs px-3 py-3 shadow-lg">
+                        <span className="badge border-none text-success backdrop-blur-md font-mono text-xs px-3 py-3 shadow-lg">
                           ● Completed
                         </span>
                       ) : (
-                        <span className="badge border-none bg-warning/20 text-warning backdrop-blur-md font-mono text-xs px-3 py-3 shadow-lg">
+                        <span className="badge border-none text-warning backdrop-blur-md font-mono text-xs px-3 py-3 shadow-lg">
                           ○ {project.status}
                         </span>
                       )}
