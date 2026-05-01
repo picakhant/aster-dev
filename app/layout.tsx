@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Aster | Full-Stack Web Developer",
     description:
       "Explore my projects, case studies, and web development journey.",
-    url: "https://yourdomain.com", // TODO: Vercel က ရလာမယ့် မင်းရဲ့ တကယ့် Domain ကို ပြောင်းထည့်ပါ
+    url: "https://aster-dev.vercel.app/", // TODO: Vercel က ရလာမယ့် မင်းရဲ့ တကယ့် Domain ကို ပြောင်းထည့်ပါ
     siteName: "Aster's Dev Portfolio",
     type: "website",
   },
