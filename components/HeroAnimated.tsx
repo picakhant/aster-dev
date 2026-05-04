@@ -35,7 +35,7 @@ export default function Hero() {
                 <div className="w-20 h-20 rounded-full ring-2 ring-primary ring-offset-base-300 ring-offset-4 shadow-lg shadow-primary/20 transition-transform duration-300 hover:scale-105 hover:rotate-3">
                   {/* ကိုယ်ပိုင် ဓာတ်ပုံပြောင်းချင်ရင် src နေရာမှာ '/profile.jpg' လို့ ပြောင်းထည့်ပါ 
                       (ပုံကို public folder ထဲမှာ ထည့်ထားဖို့ လိုပါမယ်) */}
-                  <img src="./profile.jpeg" alt="Aster - Community Mentor" />
+                  <img src="./profile.png" alt="Aster - Community Mentor" />
                 </div>
               </div>
 
