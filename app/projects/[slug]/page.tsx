@@ -11,7 +11,7 @@ import { Markdown } from "@/components/projects/Markdown";
 import { formatDate } from "@/components/projects/ProjectCard";
 import { GitHubIcon } from "@/components/ui/GitHubIcon";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { site } from "@/site.config";
+
 
 const externalProps = { target: "_blank", rel: "noopener noreferrer" };
 
@@ -27,7 +27,7 @@ export async function generateMetadata(
   const project = await getProjectBySlug(slug);
   if (!project) return {};
   return {
-    title: `${project.name} | ${site.siteName}`,
+    title: project.name,
     description: project.description,
   };
 }

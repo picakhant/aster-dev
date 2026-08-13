@@ -7,7 +7,7 @@ import { GitHubIcon } from "@/components/ui/GitHubIcon";
 import { FadeIn } from "@/components/ui/FadeIn";
 
 export const metadata: Metadata = {
-  title: `Contact | ${site.siteName}`,
+  title: "Contact",
   description:
     "Get in touch with Aster Julian Ray — email, Telegram, and GitHub.",
 };

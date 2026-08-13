@@ -7,7 +7,7 @@ import { Markdown } from "@/components/projects/Markdown";
 import { formatPostDate } from "@/components/blog/BlogCard";
 import { GitHubIcon } from "@/components/ui/GitHubIcon";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { site } from "@/site.config";
+
 
 const externalProps = { target: "_blank", rel: "noopener noreferrer" };
 
@@ -23,7 +23,7 @@ export async function generateMetadata(
   const post = (await getPostContent(slug))?.post;
   if (!post) return {};
   return {
-    title: `${post.title} | ${site.siteName}`,
+    title: post.title,
     description: post.description || post.excerpt,
   };
 }

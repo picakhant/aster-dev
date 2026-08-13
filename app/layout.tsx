@@ -23,10 +23,26 @@ const notoSansMyanmar = Noto_Sans_Myanmar({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} | ${site.role}`,
-  description: site.description,
-  keywords: [...site.keywords],
+  metadataBase: new URL(site.url),
+  title: {
+    default: "Aster | Web Developer Portfolio",
+    template: "%s | Aster",
+  },
+  description:
+    "Personal portfolio of Aster (aster-dev) - Web developer showcasing projects, technical skills, and writings.",
+  keywords: [
+    "Aster",
+    "aster-dev",
+    "portfolio",
+    "web developer",
+    "software engineer",
+    "UCS Pyay",
+  ],
   authors: [{ name: site.name }],
+  verification: {
+    google:
+      process.env.NEXT_PUBLIC_GSC_VERIFICATION_TOKEN || "YOUR_GSC_TOKEN_HERE",
+  },
   openGraph: {
     title: site.ogTitle,
     description: site.ogDescription,

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { getBlogPosts } from "@/lib/blog";
 import { BlogGrid } from "@/components/blog/BlogGrid";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { blog, site } from "@/site.config";
+import { blog } from "@/site.config";
 
 export const metadata: Metadata = {
-  title: `Blog | ${site.siteName}`,
+  title: "Blog",
   description:
     "Tech articles and notes written by Aster Julian Ray — web development, CS learnings, and community experiences.",
 };

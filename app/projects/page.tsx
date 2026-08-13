@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { getPortfolioRepos } from "@/lib/github";
 import { ProjectGrid } from "@/components/projects/ProjectGrid";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { site } from "@/site.config";
+
 
 export const metadata: Metadata = {
-  title: `Projects | ${site.siteName}`,
+  title: "Projects",
   description:
     "A collection of projects built by Aster Julian Ray — web apps, experiments, and campus projects.",
 };
