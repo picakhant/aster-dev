@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: dracula --default, winter;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo,
+    monospace;
+  --font-myanmar: var(--font-noto-myanmar), var(--font-sans);
+}
+/* # Visual Design Update: Huge Grid Background Pattern */
+
+/* **Instruction for Coder:** Update the global styles to replace the solid background color (`bg-base-100`) of the entire landing page and root layout with a huge, subtle grid background pattern.
+
+**Implementation Details:**
+
+1.  **Global CSS Update:** Open `src/app/globals.css` (or wherever your main CSS is) and add the following custom utility class using CSS gradients. Ensure the line color is very subtle and works dynamically across both dark (`dracula`) and light (`winter`) themes.
+
+```css */
+@layer base {
+  .bg-grid-huge {
+    background-size: 100px 100px; /* Adjust for grid density */
+    background-image: 
+      linear-gradient(to right, hsl(var(--bc) / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--bc) / 0.05) 1px, transparent 1px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background-color: var(--color-base-100); */
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+@layer base {
+  .bg-grid-huge {
+    background-size: 100px 100px;
+    background-image: linear-gradient(
+        to right,
+        color-mix(in oklab, var(--color-base-content) 5%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--color-base-content) 5%, transparent) 1px,
+        transparent 1px
+      );
+  }
+}
