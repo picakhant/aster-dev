@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { hero, heroTerminal, heroTitle, site } from "@/site.config";
 import { Stagger, StaggerItem } from "@/components/ui/Stagger";
 
@@ -54,20 +55,26 @@ export function Hero() {
 
             <StaggerItem>
               <div className="flex flex-wrap gap-3 mt-8 justify-center lg:justify-start">
-                {hero.ctas.map((cta) => (
-                  <a
-                    key={cta.label}
-                    href={cta.href}
-                    {...(cta.href.startsWith("http") ? externalProps : {})}
-                    className={
-                      cta.variant === "primary"
-                        ? "btn btn-primary gap-2"
-                        : "btn btn-outline gap-2"
-                    }
-                  >
-                    {cta.label}
-                  </a>
-                ))}
+                {hero.ctas.map((cta) => {
+                  const className =
+                    cta.variant === "primary"
+                      ? "btn btn-primary gap-2"
+                      : "btn btn-outline gap-2";
+                  return cta.href.startsWith("http") ? (
+                    <a
+                      key={cta.label}
+                      href={cta.href}
+                      {...externalProps}
+                      className={className}
+                    >
+                      {cta.label}
+                    </a>
+                  ) : (
+                    <Link key={cta.label} href={cta.href} className={className}>
+                      {cta.label}
+                    </Link>
+                  );
+                })}
               </div>
             </StaggerItem>
           </Stagger>

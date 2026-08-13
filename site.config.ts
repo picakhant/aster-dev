@@ -113,6 +113,7 @@ export const hero = {
   description:
     "Hi, I'm Aster Julian Ray. A Web Developer and Community Mentor. I specialize in building scalable applications and guiding junior students to craft clean code.",
   ctas: [
+    { label: "View Projects", href: "/projects", variant: "primary" },
     { label: "Join Telegram Community", href: site.telegramCommunity, variant: "outline" },
   ] as HeroCta[],
 } as const;
